@@ -16,18 +16,18 @@
   },
   "scripts": {
     "install": "npx node-gyp configure build && tsc",
-    "configure" : "npx node-gyp configure  --verbose",
+    "configure": "npx node-gyp configure  --verbose",
+    "build_binary": "npx node-gyp build",
     "build": "tsc",
-    
     "adx_explain": "ts-node examples/adx_explain.ts",
     "adx": "ts-node examples/adx.ts",
     "bbands": "ts-node examples/bbands.ts",
-    "cdlhammer" : "ts-node examples/cdlhammer.ts",
+    "cdlhammer": "ts-node examples/cdlhammer.ts",
     "functions": "ts-node examples/functions.ts",
-    "sma" : "ts-node examples/sma.ts"
+    "sma": "ts-node examples/sma.ts"
   },
   "main": "dist/typings/index.js",
-  "types":"dist/typings/index.d.ts",
+  "types": "dist/typings/index.d.ts",
   "engines": {
     "node": ">=4.1.1"
   },

@@ -1,0 +1,21 @@
+{
+    "rules": {
+        "no-console": [false],
+        "variable-name": false,
+        "radix": false,
+        "object-literal-sort-keys": false,
+        "trailing-comma":[false],
+        "indent": [true,"tabs"],
+        "max-line-length": [false],
+        "no-string-literal": false,
+        "class-name": false,
+        "no-namespace": [false],
+        "no-bitwise": false,
+        "interface-name": [false,"always-prefix"],
+        "jsdoc-format":false,
+        "no-empty-interface":false,
+        "unified-signatures":false,
+        "max-classes-per-file":false
+    },
+    "extends": "tslint:recommended"
+}

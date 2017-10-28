@@ -311,7 +311,7 @@
 			],
 			
 			'include_dirs': [
-				"<!(node -e \"require('nan')\")",
+				
                 "src/ta-lib/include",
                 "src/ta-lib/src/ta_abstract",
                 "src/ta-lib/src/ta_common",
@@ -387,12 +387,14 @@
         },
         {
             "target_name":"node-ta-lib",
-
+            "include_dirs":[
+                "<!(node -e \"require('nan')\")",
+            ],
             "sources":[
                 "binding.gyp",
                 "package.json",
                 "readme.md",
-                "src/init.cpp",
+                "src/talib.cpp",
                 "tsconfig.json",
 
 

@@ -6,11 +6,11 @@ A thin [node.js](http://nodejs.org) wrapper around [TA-LIB](http://ta-lib.org/),
 
 To install the most recent release from npm, run:
 
-    npm install talib
+    npm install drorgl/node-talib
 
 ## Building
 
-The source code is available at [github](http://github.com/oransel/node-talib). You can either clone the repository or download a zip file of the latest release.
+The source code is available at [github](http://github.com/drorgl/node-talib). You can either clone the repository or download a zip file of the latest release.
 
 Once you have the source, you can build the module by running
 
@@ -146,9 +146,21 @@ For working examples look in the `examples/` directory. You can execute the exam
 
 	node examples/adx.js
 
-## Roadmap
+## TypeScript Examples
+All examples have been converted to typescript in drorgl/node-talib repository, documentation coming soon or you can look at index.ts for further information
 
-There has been community work with Windows support. Windows support will be merged soon.
+## Recent Changes
+
+```
+1.0.0 2017-10-28 (Dror Gluska):
+	Major overhaul
+	Update ta-lib to latest (0.4)
+	create a generic build in binding.gyp, should work with most if not all OSs
+	Add build for ta-lib tests (under build/Debug/ta_regtest or build/Release/ta_regtest)
+	Add TypeScript typings
+	Add funtion definitions
+	Add async functions
+```
 
 ## License
 

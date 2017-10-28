@@ -3,33 +3,43 @@
   "contributors": [
     "Alfred Omega",
     "Vedran Opacic",
-    "Kelvin Foo"
+    "Kelvin Foo",
+    "Dror Gluska"
   ],
   "name": "talib",
   "description": "Technical Analysis Library",
-  "version": "1.0.3",
-  "homepage": "https://github.com/oransel/node-talib",
+  "version": "1.0.0",
+  "homepage": "https://github.com/drorgl/node-talib",
   "repository": {
     "type": "git",
-    "url": "https://github.com/oransel/node-talib.git"
+    "url": "https://github.com/drorgl/node-talib.git"
   },
-  "os": [
-    "darwin",
-    "linux"
-  ],
   "scripts": {
-    "install": "node ./src/lib/build.js && node-gyp configure && node-gyp build",
-    "clean": "rm -rf ./build && rm -rf ./node_modules && node ./src/lib/clean.js"
+    "install": "npx node-gyp configure build && tsc",
+    "configure" : "npx node-gyp configure  --verbose",
+    "build": "tsc",
+    
+    "adx_explain": "ts-node examples/adx_explain.ts",
+    "adx": "ts-node examples/adx.ts",
+    "bbands": "ts-node examples/bbands.ts",
+    "cdlhammer" : "ts-node examples/cdlhammer.ts",
+    "functions": "ts-node examples/functions.ts",
+    "sma" : "ts-node examples/sma.ts"
   },
-  "main": "build/Release/talib.node",
+  "main": "dist/typings/index.js",
+  "types":"dist/typings/index.d.ts",
   "engines": {
     "node": ">=4.1.1"
   },
   "dependencies": {
-    "nan": "^2.5.0"
+    "nan": "^2.7.0",
+    "node-gyp": "drorgl/node-gyp",
+    "source-map-support": "^0.5.0",
+    "ts-node": "^3.3.0",
+    "typescript": "2.5.3",
+    "@types/node": "^8.0.47",
+    "tslint": "^5.8.0"
   },
-  "devDependencies": {},
-  "optionalDependencies": {},
   "keywords": [
     "talib",
     "stocks",

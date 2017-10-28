@@ -28,10 +28,10 @@
 #include <node.h>
 #include <nan.h>
 
-#include "./lib/include/ta_abstract.h"
-#include "./lib/include/ta_common.h"
-#include "./lib/include/ta_defs.h"
-#include "./lib/include/ta_func.h"
+#include "ta_abstract.h"
+#include "ta_common.h"
+#include "ta_defs.h"
+#include "ta_func.h"
 
 using v8::Function;
 using v8::FunctionTemplate;
@@ -385,7 +385,7 @@ NAN_GETTER(FunctionUnstIds) {
     Set(func_object, New<String>("TA_FUNC_UNST_HT_SINE").ToLocalChecked(), New(TA_FUNC_UNST_HT_SINE));
     Set(func_object, New<String>("TA_FUNC_UNST_HT_TRENDLINE").ToLocalChecked(), New(TA_FUNC_UNST_HT_TRENDLINE));
     Set(func_object, New<String>("TA_FUNC_UNST_HT_TRENDMODE").ToLocalChecked(), New(TA_FUNC_UNST_HT_TRENDMODE));
-    Set(func_object, New<String>("TA_FUNC_UNST_IMI").ToLocalChecked(), New(TA_FUNC_UNST_IMI));
+    //Set(func_object, New<String>("TA_FUNC_UNST_IMI").ToLocalChecked(), New(TA_FUNC_UNST_IMI));
     Set(func_object, New<String>("TA_FUNC_UNST_KAMA").ToLocalChecked(), New(TA_FUNC_UNST_KAMA));
     Set(func_object, New<String>("TA_FUNC_UNST_MAMA").ToLocalChecked(), New(TA_FUNC_UNST_MAMA));
     Set(func_object, New<String>("TA_FUNC_UNST_MFI").ToLocalChecked(), New(TA_FUNC_UNST_MFI));
@@ -1060,7 +1060,7 @@ void Init(Handle<Object> exports, Handle<Object> module) {
     TA_Initialize();
 
     // Define fields
-    Set(exports, New<String>("version").ToLocalChecked(), New<String>("1.0.3").ToLocalChecked());
+    Set(exports, New<String>("version").ToLocalChecked(), New<String>(TA_GetVersionString()).ToLocalChecked());
 
     // Define accessors
     SetAccessor(exports, New<String>("functions").ToLocalChecked(), Functions);

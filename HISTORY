@@ -1,3 +1,12 @@
+1.0.0 2017-10-28 (Dror Gluska):
+	Major overhaul
+	Update ta-lib to latest (0.4)
+	create a generic build in binding.gyp, should work with most if not all OSs
+	Add build for ta-lib tests (under build/Debug/ta_regtest or build/Release/ta_regtest)
+	Add TypeScript typings
+	Add funtion definitions
+	Add async functions
+
 0.5.0 2015-03-04:
 	Added nodejs 0.12 compatibility
 

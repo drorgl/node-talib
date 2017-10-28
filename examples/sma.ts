@@ -1,5 +1,6 @@
 import fs = require("fs");
 import talib = require("../typings/index");
+import process = require("process");
 
 // Display module version
 console.log();
@@ -15,7 +16,8 @@ console.log("Explain: ", talib.explain("SMA"));
 talib.SMA(marketData.close, 180).then((result) => {
 	console.log("outReal", result.result.outReal);
 }, (reject) => {
-	console.log(reject);
+	console.log("Error", reject);
+	process.exit(1);
 });
 
 talib.execute({
@@ -25,7 +27,11 @@ talib.execute({
 	inReal: marketData.close,
 	optInTimePeriod: 180
 }, (err, result) => {
-
+	if (err){
+		console.log("Error", err);
+		process.exit(1);
+	}
+	
 	// Show the result array
 	console.log("SMA Function Results:");
 	console.log(JSON.stringify( result, null, "\t"));

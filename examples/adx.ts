@@ -1,5 +1,6 @@
 import fs = require("fs");
 import talib = require("../typings/index");
+import process = require("process");
 
 // Display module version
 console.log();
@@ -19,7 +20,9 @@ talib.execute({
 	close: marketData.close,
 	optInTimePeriod: 9
 }, (err, result) => {
-
+	if (err){
+		process.exit(1);
+	}
 	// Show the result array
 	console.log("ADX Function Results:");
 	console.log(result);

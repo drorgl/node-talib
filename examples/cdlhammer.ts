@@ -1,5 +1,6 @@
 import fs = require("fs");
 import talib = require("../typings/index");
+import process = require("process");
 
 // Display module version
 console.log();
@@ -12,7 +13,8 @@ const marketData = JSON.parse(marketContents);
 talib.CDLHAMMER(marketData.open, marketData.high, marketData.low, marketData.close).then((result) => {
 	console.log("outReal", result.result.outInteger);
 }, (reject) => {
-	console.log(reject);
+	console.log("Error", reject);
+	process.exit(1);
 });
 
 // execute CDLHAMMER indicator function
@@ -25,7 +27,10 @@ talib.execute({
 	low: marketData.low,
 	close: marketData.close
 }, (err, result) => {
-
+	if (err){
+		console.log("Error", err);
+		process.exit(1);
+	}
 	// Show the result array
 	console.log("CDLHAMMER Function Results:");
 	console.log(JSON.stringify( result, null, "\t"));

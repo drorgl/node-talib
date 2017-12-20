@@ -37,7 +37,7 @@
     "node-gyp": "drorgl/node-gyp",
     "npx": "^9.7.1",
     "source-map-support": "^0.5.0",
-    "ts-node": "^4.0.2",
+    "ts-node": "^3.3.0",
     "tslint": "^5.8.0",
     "typescript": "2.6.2"
   },

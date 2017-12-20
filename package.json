@@ -32,13 +32,14 @@
     "node": ">=4.1.1"
   },
   "dependencies": {
-    "nan": "^2.7.0",
+    "@types/node": "^8.5.2",
+    "nan": "^2.8.0",
     "node-gyp": "drorgl/node-gyp",
+    "npx": "^9.7.1",
     "source-map-support": "^0.5.0",
-    "ts-node": "^3.3.0",
-    "typescript": "2.5.3",
-    "@types/node": "^8.0.47",
-    "tslint": "^5.8.0"
+    "ts-node": "^4.0.2",
+    "tslint": "^5.8.0",
+    "typescript": "2.6.2"
   },
   "keywords": [
     "talib",

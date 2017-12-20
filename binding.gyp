@@ -330,7 +330,7 @@
 					}
 				],
 				['OS in "linux android"', {
-						'cflags': ['-fexceptions', '-std=c++11'],
+						'cflags_cc': ['-fexceptions', '-std=c++11'],
 						'cflags!': ['-fno-exceptions'],
 						'cflags_cc!': ['-fno-rtti', '-fno-exceptions'],
 					}

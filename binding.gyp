@@ -1,9 +1,9 @@
 {
 	'target_defaults': {
 		'msvs_settings': {
-			'VCCLCompilerTool': {
-				'ObjectFile': '$(IntDir)/%(RelativeDir)/',
-			},
+			# 'VCCLCompilerTool': {
+			# 	'ObjectFile': '$(IntDir)/%(RelativeDir)/',
+			# },
 
 		},
 		'configurations': {

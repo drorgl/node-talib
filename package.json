@@ -34,7 +34,7 @@
   "dependencies": {
     "@types/node": "^8.5.2",
     "nan": "^2.8.0",
-    "node-gyp": "drorgl/node-gyp",
+    "node-gyp": "3.6.2",
     "npx": "^9.7.1",
     "source-map-support": "^0.5.0",
     "ts-node": "^3.3.0",

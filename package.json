@@ -6,7 +6,7 @@
     "Kelvin Foo",
     "Dror Gluska"
   ],
-  "name": "talib",
+  "name": "@drorgl/talib",
   "description": "Technical Analysis Library",
   "version": "1.0.0",
   "homepage": "https://github.com/drorgl/node-talib",

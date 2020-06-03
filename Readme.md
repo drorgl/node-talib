@@ -6,7 +6,11 @@ A thin [node.js](http://nodejs.org) wrapper around [TA-LIB](http://ta-lib.org/),
 
 To install the most recent release from npm, run:
 
-    npm install drorgl/node-talib
+    npm install @drorgl/talib
+
+## Documentation
+
+You can find the documentation at the [github wiki](https://github.com/drorgl/node-talib/wiki/ta-lib).
 
 ## Building
 

@@ -11,3 +11,4 @@ node_modules
 /docs/*.htm
 /.vscode/c_cpp_properties.json
 /.vscode/settings.json
+drorgl-talib-*.tgz

@@ -20,7 +20,7 @@
     "build_binary": "node-gyp build",
     "build": "tsc",
     "doc": "rimraf ./docs/html && typedoc --tsconfig tsconfig.json",
-    "doc-markdown": "rimraf ./docs/html && typedoc --tsconfig tsconfig.json --theme markdown",
+    "doc:markdown": "rimraf ./doc/html && typedoc --tsconfig tsconfig.json --plugin typedoc-plugin-markdown --theme markdown && concat-md --toc --decrease-title-levels --dir-name-as-title ./docs/html > ./docs/html/single-page.md",
     "publish-now": "npm publish --access public",
     "adx_explain": "ts-node examples/adx_explain.ts",
     "adx": "ts-node examples/adx.ts",
@@ -37,6 +37,7 @@
   "dependencies": {
     "@types/node": "^14.0.9",
     "bindings": "^1.5.0",
+    "concat-md": "^0.3.5",
     "nan": "^2.14.1",
     "rimraf": "^3.0.2",
     "source-map-support": "^0.5.19",
@@ -44,6 +45,7 @@
     "tslint": "^6.1.2",
     "typedoc": "^0.17.7",
     "typedoc-plugin-external-module-name": "^4.0.0",
+    "typedoc-plugin-markdown": "^2.3.0",
     "typescript": "3.9.3"
   },
   "keywords": [

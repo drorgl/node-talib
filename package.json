@@ -15,10 +15,13 @@
     "url": "https://github.com/drorgl/node-talib.git"
   },
   "scripts": {
-    "install": "npx node-gyp configure build && tsc",
-    "configure": "npx node-gyp configure  --verbose",
-    "build_binary": "npx node-gyp build",
+    "install": "node-gyp configure build && tsc",
+    "configure": "node-gyp configure  --verbose",
+    "build_binary": "node-gyp build",
     "build": "tsc",
+    "doc": "rimraf ./docs/html && typedoc --tsconfig tsconfig.json",
+    "doc-markdown": "rimraf ./docs/html && typedoc --tsconfig tsconfig.json --theme markdown",
+    "publish-now": "npm publish --access public",
     "adx_explain": "ts-node examples/adx_explain.ts",
     "adx": "ts-node examples/adx.ts",
     "bbands": "ts-node examples/bbands.ts",
@@ -32,14 +35,16 @@
     "node": ">=4.1.1"
   },
   "dependencies": {
-    "@types/node": "^8.5.2",
-    "nan": "^2.8.0",
-    "node-gyp": "3.6.2",
-    "npx": "^9.7.1",
-    "source-map-support": "^0.5.0",
-    "ts-node": "^3.3.0",
-    "tslint": "^5.8.0",
-    "typescript": "2.6.2"
+    "@types/node": "^14.0.9",
+    "bindings": "^1.5.0",
+    "nan": "^2.14.1",
+    "rimraf": "^3.0.2",
+    "source-map-support": "^0.5.19",
+    "ts-node": "^8.10.2",
+    "tslint": "^6.1.2",
+    "typedoc": "^0.17.7",
+    "typedoc-plugin-external-module-name": "^4.0.0",
+    "typescript": "3.9.3"
   },
   "keywords": [
     "talib",

@@ -21,5 +21,16 @@
     "include": [
         "tests/**/*.ts",
         "typings/**/*.ts"
-    ]
+    ],
+    "typedocOptions": {
+        "mode": "modules",
+        "out": "docs/html",
+        "excludePrivate": true,
+        "excludeNotExported": true,
+        "externalPattern": "**/node_modules",
+        "toc": [
+            "JanusAdmin",
+        ],
+        "theme":"docs/theme"
+    }
 }
